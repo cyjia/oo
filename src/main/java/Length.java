@@ -1,18 +1,19 @@
 public class Length {
     private int value;
-    private final Unit unit;
+    private final LengthUnit unit;
 
     public Length(int value) {
-        this(value, Unit.CM);
+        this(value, LengthUnit.CM);
     }
 
-    public Length(int value, Unit unit) {
+    public Length(int value, LengthUnit unit) {
         this.value = value;
         this.unit = unit;
     }
 
     @Override
     public boolean equals(Object obj) {
-        return ((Length)obj).value == this.value;
+        Length other = (Length) obj;
+        return other.unit.toBaseUnit(other.value) == unit.toBaseUnit(this.value);
     }
 }
