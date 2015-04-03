@@ -1,6 +1,7 @@
 import org.junit.*;
 import org.junit.Test;
 
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 
 public class ParkingLotTest {
@@ -28,5 +29,17 @@ public class ParkingLotTest {
 
         assertSame(firstCar, parkingLot.pick(firstNumber));
         assertSame(secondCar, parkingLot.pick(secondNumber));
+    }
+
+    @Test
+    public void should_not_pick_the_car_again_given_a_car_was_stored_then_picked_in_the_parking_lot() throws Exception {
+        ParkingLot parkingLot = new ParkingLot();
+        String carNumber = "601 ACK";
+        Car car = new Car(carNumber);
+
+        parkingLot.store(car);
+        parkingLot.pick(carNumber);
+
+        assertNull(parkingLot.pick(carNumber));
     }
 }

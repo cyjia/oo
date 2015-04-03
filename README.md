@@ -22,3 +22,7 @@ This is an exercise of OO Bootcamp class hosted in thoughtworks. The class is ai
     Given a parking lot and two cars
     When the two cars are stored
     Then the two cars can be picked
+    
+    Given a parking lot and one car
+    When the car is stored and picked
+    Then the car should not be picked again

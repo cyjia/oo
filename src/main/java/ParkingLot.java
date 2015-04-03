@@ -14,8 +14,10 @@ public class ParkingLot {
 
     public Car pick(String carNumber) {
         for(Car car:cars) {
-            if(car.isSame(carNumber))
+            if(car.isSame(carNumber)) {
+                cars.remove(car);
                 return car;
+            }
         }
         return null;
     }
