@@ -18,3 +18,7 @@ This is an exercise of OO Bootcamp class hosted in thoughtworks. The class is ai
     Given a parking lot and a car
     When a car is stored
     Then the car should be able to be picked
+    
+    Given a parking lot and two cars
+    When the two cars are stored
+    Then the two cars can be picked
