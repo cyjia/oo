@@ -14,6 +14,6 @@ public class Length {
     @Override
     public boolean equals(Object obj) {
         Length other = (Length) obj;
-        return other.unit.toBaseUnit(other.value) == unit.toBaseUnit(this.value);
+        return this.value == unit.transFrom(other.unit, other.value);
     }
 }

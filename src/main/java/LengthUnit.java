@@ -1,7 +1,7 @@
-public enum LengthUnit {
-    CM(10),
-    M(1000),
-    MM(1);
+public class LengthUnit {
+    public static LengthUnit CM = new LengthUnit(10);
+    public static LengthUnit M = new LengthUnit(1000);
+    public static LengthUnit MM = new LengthUnit(1);
 
     private final int ratio;
 
@@ -9,8 +9,7 @@ public enum LengthUnit {
         this.ratio = ratio;
     }
 
-    public int toBaseUnit(int value) {
-        return value * ratio;
+    public int transFrom(LengthUnit unit, int value) {
+        return unit.ratio * value / ratio;
     }
-
 }
