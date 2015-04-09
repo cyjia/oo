@@ -26,3 +26,20 @@ This is an exercise of OO Bootcamp class hosted in thoughtworks. The class is ai
     Given a parking lot and one car
     When the car is stored and picked
     Then the car should not be picked again
+    
+    
+- ParkingBoy can store and pick a car among multiple ParkingLot
+    
+    Tasking
+    
+    Given a parking lot and a parking boy
+    When a car is stored by parking boy
+    Then the car should be picked by parking lot
+
+    Given a parking lot and a parking boy
+    When a car is stored by parking boy
+    Then the car should be picked by parking boy
+    
+    Given two parking lot and a parking boy
+    When a car is stored
+    Then the car should be picked by parking boy
