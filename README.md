@@ -43,3 +43,7 @@ This is an exercise of OO Bootcamp class hosted in thoughtworks. The class is ai
     Given two parking lot and a parking boy
     When a car is stored
     Then the car should be picked by parking boy
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/cyjia/oo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
